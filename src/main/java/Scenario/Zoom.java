@@ -38,9 +38,9 @@ public class Zoom extends Effet{
     @Override
     public void effctuerEffet() {
         int a = 1;
-        for (int j =0;j<super.getRepetition();j++){
+        for (int j =1;j<=super.getRepetition();j++){
             for (int i = 1 ; i < 1*grossisment ; i+=1) {
-                getBandeau().setMessage(getNom()+" repetition n°"+j+1);
+                getBandeau().setMessage(getNom()+" repetition n°"+j);
                 getBandeau().setFont(new Font("Dialog", Font.BOLD, 1+a));;
                 getBandeau().sleep(100);
                 a += 1;
