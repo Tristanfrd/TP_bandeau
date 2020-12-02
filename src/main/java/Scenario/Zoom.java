@@ -16,8 +16,8 @@ public class Zoom extends Effet{
 
     private int grossisment;
 
-    public Zoom(int grossisment, String nom, Bandeau b) {
-        super(nom, b);
+    public Zoom(int grossisment, String nom, Bandeau b,int r) {
+        super(nom, b,r);
         this.grossisment = grossisment;
     }
 
@@ -37,12 +37,16 @@ public class Zoom extends Effet{
     
     @Override
     public void effctuerEffet() {
-        for (int i = 1; i < 1*grossisment ; i+=1) {
-            getBandeau().setMessage(getNom());
-            getBandeau().setFont(new Font("Dialog", Font.BOLD, 1+i));
-            getBandeau().sleep(100);
+        int a = 1;
+        for (int j =0;j<super.getRepetition();j++){
+            for (int i = 1 ; i < 1*grossisment ; i+=1) {
+                getBandeau().setMessage(getNom()+" repetition n°"+j+1);
+                getBandeau().setFont(new Font("Dialog", Font.BOLD, 1+a));;
+                getBandeau().sleep(100);
+                a += 1;
 	}
-        
+       getBandeau().sleep(1000);
     }
     
+}
 }
