@@ -18,11 +18,11 @@ public class Scenario {
     }
     public void demonstration(){
         Bandeau bandeau = new Bandeau();
-        Zoom zm = new Zoom(50,"Zoom *50",bandeau);
+        Zoom zm = new Zoom(10,"Zoom *10",bandeau,2);
         zm.effctuerEffet();
-        ChangementCouleurTexte cct = new ChangementCouleurTexte(Color.RED,"On passe au rouge",bandeau);
+        ChangementCouleurTexte cct = new ChangementCouleurTexte(Color.RED,"On passe au rouge",bandeau,1);
         cct.effctuerEffet();
-        ChangementCouleurFond ccf = new ChangementCouleurFond(Color.BLACK,"sur fond noir",bandeau);
+        ChangementCouleurFond ccf = new ChangementCouleurFond(Color.BLACK,"sur fond noir",bandeau,1);
         ccf.effctuerEffet();
     }
 }
