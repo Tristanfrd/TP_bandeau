@@ -24,5 +24,9 @@ public class Scenario {
         cct.effctuerEffet();
         ChangementCouleurFond ccf = new ChangementCouleurFond(Color.BLACK,"sur fond noir",bandeau,1);
         ccf.effctuerEffet();
+        Rotation r = new Rotation(100,"Rotation",bandeau,2);
+        r.effctuerEffet();
+        bandeau.sleep(5000);
+        bandeau.close();
     }
 }
