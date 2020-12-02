@@ -14,8 +14,8 @@ public class ChangementCouleurFond extends Effet{
 
     private Color couleur;
 
-    public ChangementCouleurFond(Color couleur, String nom, Bandeau b) {
-        super(nom, b);
+    public ChangementCouleurFond(Color couleur, String nom, Bandeau b, int r) {
+        super(nom, b,r);
         this.couleur = couleur;
     }
 
@@ -36,9 +36,12 @@ public class ChangementCouleurFond extends Effet{
     
     @Override
     public void effctuerEffet() {
-        getBandeau().setMessage(getNom());
-        getBandeau().setBackground(couleur);
-        getBandeau().sleep(1000);
+        for (int j =0;j<super.getRepetition();j++){
+        for (int i =0;i<super.getRepetition();i++){
+            getBandeau().setMessage(getNom()+" repetition n°"+j+1);
+            getBandeau().setBackground(couleur);
+            getBandeau().sleep(1000);
     }
-    
-}
+        getBandeau().sleep(1000);
+    }    
+}}
