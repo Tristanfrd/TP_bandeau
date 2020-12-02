@@ -34,7 +34,9 @@ public class ChangementCouleurTexte extends Effet {
 
     @Override
     public void effctuerEffet() {
-        
+        getBandeau().setMessage(getNom());
+        getBandeau().setForeground(couleur);
+        getBandeau().sleep(1000);
     }
     
     
