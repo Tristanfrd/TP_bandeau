@@ -36,12 +36,10 @@ public class ChangementCouleurFond extends Effet{
     
     @Override
     public void effctuerEffet() {
-        for (int j =0;j<super.getRepetition();j++){
         for (int i =0;i<super.getRepetition();i++){
-            getBandeau().setMessage(getNom()+" repetition n°"+j+1);
+            getBandeau().setMessage(getNom()+" repetition n°"+i+1);
             getBandeau().setBackground(couleur);
             getBandeau().sleep(1000);
     }
-        getBandeau().sleep(1000);
-    }    
+        getBandeau().sleep(1000);    
 }}
