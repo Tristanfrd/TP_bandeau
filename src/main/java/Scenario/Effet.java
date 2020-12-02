@@ -15,10 +15,12 @@ public abstract class Effet {
     
     private String nom;
     private Bandeau bandeau;
+    private int repetition;
 
-    public Effet(String nom,Bandeau b) {
+    public Effet(String nom,Bandeau b,int r) {
         this.nom = nom;
         this.bandeau=b;
+        this.repetition=r;
     }
 
     public String getNom() {
@@ -37,9 +39,17 @@ public abstract class Effet {
         this.bandeau = bandeau;
     }
 
+    public int getRepetition() {
+        return repetition;
+    }
+
+    public void setRepetition(int repetition) {
+        this.repetition = repetition;
+    }
+
     @Override
     public String toString() {
-        return "Effet{" + "nom=" + nom + ", bandeau=" + bandeau + '}';
+        return "Effet{" + "nom=" + nom + ", bandeau=" + bandeau + ", repetition=" + repetition + '}';
     }
 
     public abstract void effctuerEffet();
