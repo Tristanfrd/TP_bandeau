@@ -36,10 +36,10 @@ public class Rotation extends Effet {
   @Override
     public void effctuerEffet() {
         int a = 1;
-        for (int j =0;j<super.getRepetition();j++){
-            for (int i = 1 ; i < 1*rotation ; i+=1) {
-                getBandeau().setMessage(getNom()+" repetition n°"+j+1);
-                getBandeau().setRotation(2*Math.PI*i / rotation);
+        for (int j =1;j<=super.getRepetition();j++){
+            for (int i = 0 ; i < 1*rotation ; i+=1) {
+                getBandeau().setMessage(getNom()+" repetition n°"+j);
+                getBandeau().setRotation(2*Math.PI*a / rotation);
 		getBandeau().sleep(100);
                 a += 1;
 	}
